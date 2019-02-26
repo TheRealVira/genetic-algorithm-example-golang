@@ -1,7 +1,7 @@
 # genetic-algorithm-example-golang
 A golang project visualizing the use of genetic algorithms. Also, my very first golang project.
 
-## Start it
+## Launch it
 .. by using the following command:
 
 `go run main.go`
