@@ -25,7 +25,13 @@ func main() {
 	reader := bufio.NewReader(os.Stdin)
 	fmt.Print("Enter goal-text: ")
 	goalText, _ := reader.ReadString('\n')
-	goalText = strings.TrimSuffix(goalText, "\n")
+
+	// Little hack since certain systems use "\n" and others "\r\n"
+	goalText = strings.TrimSuffix(strings.TrimSuffix(goalText, "\n"), "\r")
+
+	fmt.Print("\"")
+	fmt.Print(goalText)
+	fmt.Println("\"")
 
 	myGeneration := calcNewGeneration(PopulationCount, goalText)
 
