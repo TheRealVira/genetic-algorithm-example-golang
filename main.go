@@ -29,15 +29,7 @@ func main() {
 	// Little hack since certain systems use "\n" and others "\r\n"
 	goalText = strings.TrimSuffix(strings.TrimSuffix(goalText, "\n"), "\r")
 
-	fmt.Print("\"")
-	fmt.Print(goalText)
-	fmt.Println("\"")
-
 	myGeneration := calcNewGeneration(PopulationCount, goalText)
-
-	for i := 0; i < len(myGeneration) ; i++ {
-		fmt.Println(myGeneration[i])
-	}
 
 	generation:=1
 
